@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeHer — Your Safety, Our Priority</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Main App Shell -->
+  <div id="app" class="app-root">
+
+    <!-- ============================================== -->
+    <!-- VIEW 0: LOGIN & ONBOARDING SCREEN              -->
+    <!-- ============================================== -->
+    <div id="view-login" class="view active-view">
+      <div class="mobile-frame auth-mobile-frame">
+        
+        <!-- SafeHer Auth Header / Shield -->
+        <div class="auth-center-hero">
+          <div class="auth-shield-emblem">
+            <svg viewBox="0 0 48 48" class="auth-shield-svg">
+              <path d="M24 6L37 11V22C37 30.5 31.5 38 24 41C16.5 38 11 30.5 11 22V11L24 6Z" fill="#be185d"/>
+              <path d="M24 10L33 14V22C33 28.5 29 34.5 24 37C19 34.5 15 28.5 15 22V14L24 10Z" fill="#e11d48"/>
+              <path d="M21 23L23.5 25.5L27.5 20" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h1 class="brand-title auth-title">SafeHer</h1>
+          <p class="auth-subtitle">Your personal safety companion</p>
+        </div>
+
+        <!-- Login Form -->
+        <form id="form-login" class="auth-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="input-login-name" class="form-label">Full Name</label>
+            <input type="text" id="input-login-name" class="auth-input" placeholder="e.g. Tanishka" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="input-login-contact" class="form-label">Phone or Email (Optional)</label>
+            <input type="text" id="input-login-contact" class="auth-input" placeholder="+91 98765 *****">
+          </div>
+
+          <button type="submit" id="btn-submit-login" class="btn btn-primary-dark-pink auth-submit-btn">
+            Login
+          </button>
+
+          <button type="button" id="btn-guest-login" class="btn btn-secondary auth-guest-btn">
+            Continue as Guest
+          </button>
+
+          <!-- Quick Fill Demo Shortcut -->
+          <div class="auth-demo-shortcut">
+            <span>Evaluation Demo:</span>
+            <button type="button" id="btn-quick-tanishka" class="demo-chip-btn">Login as Tanishka</button>
+          </div>
+        </form>
+
+        <div class="auth-footer-note">
+          <span>Protected with SafeHer Emergency Protocol</span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- VIEW 1: HOME PAGE (Matches Screenshot Exactly) -->
+    <!-- ============================================== -->
+    <div id="view-home" class="view">
+      <div class="mobile-frame">
+        
+        <!-- Header -->
+        <header class="app-header">
+          <button id="btn-home-menu" class="icon-btn menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <line x1="4" y1="7" x2="20" y2="7"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="17" x2="20" y2="17"></line>
+            </svg>
+          </button>
+          <div class="brand-center">
+            <h1 class="brand-title">SafeHer</h1>
+            <p class="brand-tagline">Your Safety, Our Priority</p>
+          </div>
+          <button id="btn-logout" class="icon-btn logout-btn" title="Log Out / Switch User" aria-label="Log Out">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#be185d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+          </button>
+        </header>
+        <div class="header-divider"></div>
+
+        <!-- Greeting Section -->
+        <section class="greeting-section">
+          <div class="greeting-text">
+            <h2 id="user-greeting-name" class="user-name">Hello, User</h2>
+            <p class="user-subtext">Stay safe, Stay Protected.</p>
+          </div>
+          <div id="avatar-badge-btn" class="avatar-badge" title="User Profile (Click to switch account)">
+            <!-- Female profile silhouette -->
+            <svg viewBox="0 0 100 100" class="avatar-svg">
+              <circle cx="50" cy="50" r="48" fill="#f8b3c4" />
+              <path d="M50 20 C42 20 36 26 36 34 C36 40 39 45 44 47 C39 49 32 54 30 62 C34 68 42 72 50 72 C58 72 66 68 70 62 C68 54 61 49 56 47 C61 45 64 40 64 34 C64 26 58 20 50 20 Z" fill="#ffffff"/>
+            </svg>
+          </div>
+        </section>
+
+        <!-- Large Emergency SOS Button / Card -->
+        <section class="sos-banner-section">
+          <button id="btn-open-sos" class="sos-banner-btn" aria-label="Emergency SOS - Tap for Emergency">
+            <div class="sos-emblem-wrapper">
+              <div class="sos-emblem-outer-ring"></div>
+              <div class="sos-emblem-inner">
+                <!-- Siren Emergency Beacon Icon -->
+                <svg class="siren-icon" viewBox="0 0 48 48" fill="none">
+                  <path d="M24 10C17.37 10 12 15.37 12 22V27H36V22C36 15.37 30.63 10 24 10Z" fill="#ff4d6d"/>
+                  <path d="M10 27H38V31C38 32.1 37.1 33 36 33H12C10.9 33 10 32.1 10 31V27Z" fill="#c9184a"/>
+                  <circle cx="24" cy="8" r="2.5" fill="#ff758f"/>
+                  <path d="M14 13L10 9M34 13L38 9M24 6V2" stroke="#ff758f" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span class="sos-emblem-text">SOS</span>
+              </div>
+            </div>
+            <h2 class="sos-title">Emergency SOS</h2>
+            <p class="sos-subtitle">Tap for Emergency</p>
+          </button>
+        </section>
+
+        <!-- Quick Feature Cards (2x2 Grid) -->
+        <section class="features-grid">
+          <!-- Card 1: AI Safety Chatbot -->
+          <div class="feature-card">
+            <div class="feature-icon-circle bot-icon-bg">
+              <svg viewBox="0 0 40 40" class="feature-svg">
+                <circle cx="20" cy="20" r="19" fill="#fce4ec"/>
+                <!-- Cute safety bot -->
+                <rect x="11" y="14" width="18" height="14" rx="5" fill="#d81b60"/>
+                <circle cx="16" cy="20" r="2" fill="#ffffff"/>
+                <circle cx="24" cy="20" r="2" fill="#ffffff"/>
+                <path d="M17 24 Q20 26 23 24" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="8" cy="21" r="2" fill="#ad1457"/>
+                <circle cx="32" cy="21" r="2" fill="#ad1457"/>
+                <line x1="20" y1="10" x2="20" y2="14" stroke="#d81b60" stroke-width="2"/>
+                <circle cx="20" cy="9" r="2" fill="#ff4081"/>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h3 class="feature-title">AI SAFETY CHATBOT</h3>
+              <p class="feature-desc">Chat for help and Guidance</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Safe Journey -->
+          <div class="feature-card">
+            <div class="feature-icon-circle journey-icon-bg">
+              <svg viewBox="0 0 40 40" class="feature-svg">
+                <circle cx="20" cy="20" r="19" fill="#fce4ec"/>
+                <!-- Map and Pin -->
+                <path d="M10 27L17 23L23 27L30 23V13L23 17L17 13L10 17V27Z" fill="#f8bbd0" stroke="#d81b60" stroke-width="1.2"/>
+                <path d="M23 11C20.8 11 19 12.8 19 15C19 18.5 23 22 23 22C23 22 27 18.5 27 15C27 12.8 25.2 11 23 11Z" fill="#c2185b"/>
+                <circle cx="23" cy="15" r="1.5" fill="#ffffff"/>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h3 class="feature-title">SAFE JOURNEY</h3>
+              <p class="feature-desc">Share your live location</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Safety Resources -->
+          <div class="feature-card">
+            <div class="feature-icon-circle resource-icon-bg">
+              <svg viewBox="0 0 40 40" class="feature-svg">
+                <circle cx="20" cy="20" r="19" fill="#fce4ec"/>
+                <!-- Shield and Book/Heart -->
+                <path d="M20 9L29 13V19C29 25 25 29 20 31C15 29 11 25 11 19V13L20 9Z" fill="#f48fb1"/>
+                <path d="M20 12L26 15V19C26 23.5 23.5 26.5 20 28C16.5 26.5 14 23.5 14 19V15L20 12Z" fill="#ad1457"/>
+                <path d="M18 20L20 22L23 18" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h3 class="feature-title">SAFETY RESOURCES</h3>
+              <p class="feature-desc">Help materials and guides</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Emergency Contacts -->
+          <div class="feature-card">
+            <div class="feature-icon-circle contacts-icon-bg">
+              <svg viewBox="0 0 40 40" class="feature-svg">
+                <circle cx="20" cy="20" r="19" fill="#fce4ec"/>
+                <!-- Phone book & plus -->
+                <rect x="11" y="11" width="16" height="20" rx="3" fill="#d81b60"/>
+                <circle cx="19" cy="18" r="3" fill="#ffffff"/>
+                <path d="M15 26 C15 23 17 22 19 22 C21 22 23 23 23 26" fill="#ffffff"/>
+                <circle cx="27" cy="24" r="6" fill="#c2185b" stroke="#ffffff" stroke-width="1.5"/>
+                <path d="M27 21V27M24 24H30" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h3 class="feature-title">EMERGENCY CONTACTS</h3>
+              <p class="feature-desc">Quick call to your trusted contacts</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Floating Bottom Navigation -->
+        <nav class="bottom-nav">
+          <button id="nav-item-home" class="nav-item active" aria-label="Home">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+          </button>
+          <button id="nav-item-location" class="nav-item" aria-label="Location">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </button>
+          <button id="nav-item-profile" class="nav-item" aria-label="Profile" title="Profile / Switch User">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </button>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- VIEW 2: SOS CONFIRMATION SCREEN               -->
+    <!-- ============================================== -->
+    <div id="view-confirmation" class="view">
+      <div class="laptop-panel confirmation-panel">
+        
+        <!-- Top Nav Bar -->
+        <div class="panel-top-nav">
+          <button id="btn-back-home" class="nav-back-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Emergency SOS</span>
+          </button>
+          <div class="safeher-brand-tag">SafeHer System</div>
+        </div>
+
+        <!-- Confirmation Card Content -->
+        <div class="confirmation-content-card">
+          <div class="large-sos-emblem">
+            <div class="emblem-pulse-circle"></div>
+            <div class="emblem-inner-beacon">
+              <svg viewBox="0 0 48 48" class="beacon-svg">
+                <path d="M24 8C16.8 8 11 13.8 11 21V28H37V21C37 13.8 31.2 8 24 8Z" fill="#ff2d55"/>
+                <path d="M8 28H40V33C40 34.1 39.1 35 38 35H10C8.9 35 8 34.1 8 33V28Z" fill="#c2185b"/>
+                <circle cx="24" cy="5" r="3" fill="#ff758f"/>
+                <path d="M13 11L8 6M35 11L40 6M24 4V1" stroke="#ff4d6d" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span class="beacon-sos-label">SOS</span>
+            </div>
+          </div>
+
+          <h2 class="confirm-heading">Emergency SOS</h2>
+          <p class="confirm-main-prompt">Are you sure you want to activate emergency assistance?</p>
+          <p class="confirm-supporting-text">Your current location will be detected and an emergency message will be prepared.</p>
+
+          <div class="confirmation-actions">
+            <button id="btn-cancel-sos" class="btn btn-secondary">CANCEL</button>
+            <button id="btn-activate-sos" class="btn btn-primary-dark-pink">ACTIVATE SOS</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- VIEW 3: DETECTING LOCATION LOADING STATE       -->
+    <!-- ============================================== -->
+    <div id="view-loading" class="view">
+      <div class="laptop-panel loading-panel">
+        <div class="radar-loading-container">
+          <div class="radar-ripple"></div>
+          <div class="radar-ripple delayed-1"></div>
+          <div class="radar-ripple delayed-2"></div>
+          <div class="radar-center-pin">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="#be185d">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="loading-title">Detecting your location...</h3>
+        <p class="loading-subtitle">Querying browser Geolocation API for precise coordinates</p>
+      </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- VIEW 4: ERROR STATE (Permission / Hardware)    -->
+    <!-- ============================================== -->
+    <div id="view-error" class="view">
+      <div class="laptop-panel error-panel">
+        <div class="error-card">
+          <div class="error-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#d81b60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3 class="error-title">Location Detection Issue</h3>
+          <p id="error-message-text" class="error-body">Location permission is required to share your current location.</p>
+          <div class="error-actions">
+            <button id="btn-error-cancel" class="btn btn-secondary">CANCEL</button>
+            <button id="btn-error-retry" class="btn btn-primary-dark-pink">TRY AGAIN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- VIEW 5: SOS ACTIVE SCREEN (Laptop Friendly)     -->
+    <!-- ============================================== -->
+    <div id="view-active" class="view">
+      <div class="laptop-panel active-dashboard-panel">
+        
+        <!-- Header Bar -->
+        <div class="panel-top-nav">
+          <div class="active-badge-tag">
+            <span class="pulsing-red-dot"></span>
+            <span>🚨 SOS ACTIVE</span>
+          </div>
+          <div class="safeher-brand-tag">SafeHer Emergency Response</div>
+        </div>
+
+        <!-- Prominent SOS Status Header Card -->
+        <div class="sos-banner-card">
+          <div class="sos-banner-head">
+            <div class="sos-banner-title-group">
+              <h2 class="sos-banner-heading">SOS Active</h2>
+              <p class="sos-banner-sub">Emergency assistance has been activated.</p>
+            </div>
+            <div class="sos-live-pill">LIVE SESSION</div>
+          </div>
+
+          <!-- 3 Checklist Status Cards -->
+          <div class="status-cards-row">
+            <div class="status-badge-item">
+              <div class="check-icon-circle">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span class="status-badge-text">Location detected</span>
+            </div>
+
+            <div class="status-badge-item">
+              <div class="check-icon-circle">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span class="status-badge-text">Emergency alert prepared</span>
+            </div>
+
+            <div class="status-badge-item">
+              <div class="check-icon-circle">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span class="status-badge-text">Trusted contact message ready</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two Column Content Grid (Laptop Friendly 900-1100px) -->
+        <div class="active-two-column-grid">
+
+          <!-- Left Column: Current Location Card -->
+          <div class="grid-column left-col">
+            <div class="info-card location-card">
+              <div class="card-header">
+                <div class="card-icon-tag location-tag">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#c2185b">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <h3 class="card-title">Current Location</h3>
+              </div>
+
+              <div class="coords-display-box">
+                <div class="coord-row">
+                  <span class="coord-label">Latitude:</span>
+                  <span id="display-latitude" class="coord-val">Detecting...</span>
+                </div>
+                <div class="coord-row">
+                  <span class="coord-label">Longitude:</span>
+                  <span id="display-longitude" class="coord-val">Detecting...</span>
+                </div>
+                <div class="coord-meta">
+                  <span id="display-accuracy" class="accuracy-badge">Accuracy: High</span>
+                  <span id="display-timestamp" class="time-badge">Updated: Just now</span>
+                </div>
+              </div>
+
+              <button id="btn-view-map" class="btn btn-action-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>VIEW ON MAP</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Emergency Message Card & Actions -->
+          <div class="grid-column right-col">
+            
+            <!-- Emergency Message Card -->
+            <div class="info-card message-card">
+              <div class="card-header">
+                <div class="card-icon-tag message-tag">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#c2185b">
+                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                  </svg>
+                </div>
+                <h3 class="card-title">Emergency Message</h3>
+              </div>
+
+              <!-- Message preview box -->
+              <div class="emergency-text-preview" id="emergency-message-content">
+                EMERGENCY! I need immediate help.
+                My current location:
+                https://www.google.com/maps?q=...
+              </div>
+
+              <button id="btn-copy-message" class="btn btn-action-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>COPY MESSAGE</span>
+              </button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="active-actions-group">
+              <button id="btn-call-emergency" class="btn btn-call-112">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <span>CALL EMERGENCY — 112</span>
+              </button>
+
+              <button id="btn-safe-now" class="btn btn-safe-green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+                <span>I'M SAFE NOW</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ============================================== -->
+  <!-- MODAL: EMERGENCY 112 CALL PROTOTYPE DISCLAIMER -->
+  <!-- ============================================== -->
+  <div id="modal-emergency-call" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-icon-badge">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#c2185b">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+        </div>
+        <h3 class="modal-title">Emergency Call</h3>
+      </div>
+      <div class="modal-body">
+        <p class="modal-text">On a mobile device, this action would open the emergency calling interface for 112.</p>
+        <p class="modal-subtext">This web application is currently running in desktop prototype mode for evaluation.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-close-modal" class="btn btn-secondary modal-close-btn">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================== -->
+  <!-- TOAST NOTIFICATION CONTAINER                  -->
+  <!-- ============================================== -->
+  <div id="toast-container" class="toast-container" aria-live="polite">
+    <div id="toast-message" class="toast-card">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span id="toast-text">Emergency message copied</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

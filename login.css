@@ -1,0 +1,79 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.div{
+    display: flex;
+    justify-content: center;
+    display: block;
+        margin-left: 45%;
+        margin-top: 1%;
+}
+.safeher{
+    color: rgb(247, 168, 181);
+    margin-left: 3%;
+}
+.companion{
+color: rgb(251, 185, 218);
+}
+.yoursafety{
+    margin-left: -5%;
+    color: white;
+}
+img{
+    height: 200px;
+margin-left: 41%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+border-radius: 50%;
+margin-left: 44%;
+}
+.box{
+    border-radius: 20px;
+    background-color: pink;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin-left: 39%;
+    flex-direction: column;
+    padding:40px;
+    gap:10px;
+    align-items: center;
+
+}
+input{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 40px;
+    border-radius: 5px;
+}
+.welcome{
+    margin-top:-5%;
+}
+.login{
+    margin-top: -6px;
+}
+.forgot{
+    margin-left: 100px;
+    margin-top: -20px;
+    font-weight: lighter;
+    text-decoration: none;
+}
+button{height: 40px;
+    width: 300px;
+    color: white;
+    background-color: rgb(132, 9, 70);
+}
+a{
+    text-decoration: none;
+}
+/* .img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    object-position: center;
+} */

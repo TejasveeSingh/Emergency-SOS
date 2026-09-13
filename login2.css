@@ -1,0 +1,93 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.box{
+    height: 700px;
+    width: 400px;
+    background-color: pink;
+    border-radius: 20px;
+    margin-left: 40%;
+    margin-top: 32px;
+    gap: 20px;
+    
+   
+}
+img{
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.text{
+    display: inline-block;
+    margin-top: -30px;
+    margin-left: 30px;
+    
+}
+
+.create{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(102, 4, 53);
+    display: inline;
+    font-weight: bolder;
+}
+.stay{
+    color: black;
+    font-weight: bold;
+    height: 20px;
+    width: 200px;
+    display: inline;
+    justify-content: center;
+    margin-left: 30px;
+}
+.details{
+    padding: 40px;
+    flex-direction: column;
+    gap: 15px;
+    height: 200px;
+    border-radius: 20px;
+    margin-top: -10px;
+}
+input{
+    display: block;
+    width: 90%;
+    margin-bottom: 15px;
+    height: 40px;
+    border-radius: 5px;
+}
+.agree{
+    /* display: inline; */
+    font-size:small;
+    gap: 8px;
+    margin-top: 10px;
+    /* align-items: center; */
+    margin-left: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+button{
+    background-color: rgb(102, 11, 57);
+    color: white;
+    height: 40px;
+    width: 300px;
+    margin-left: 40px;
+    margin-top: 10px;
+
+}
+/* .one i{
+    position: absolute
+    left: 12px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index: index 2;
+    font-size: 18px
+
+}
+
+    */

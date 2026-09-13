@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    height: 710px;
+    width: 400px;
+    background-color: rgb(250, 225, 234);
+    border-radius: 20px;
+    margin-left: 40%;
+    margin-top: 32px;
+    gap: 20px;
+    box-shadow: 0px 5px 15px  rgba(150,50,90,0.15);
+}
+.safeHer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.yoursafety{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(212, 131, 172);
+}
+i{
+    margin-right: 10px;
+    size: 30px;
+}
+.hello{
+    display:inline-block;
+    margin-left: 20px;
+}
+.staysafe{
+    margin-left: 20px;
+    margin-top:-40px;
+}
+/* img{
+    margin-left:75%;
+    margin-top: -30px;
+    height:70px;
+    border-radius: 50%;
+} */
+.sos{
+    height:30%;
+    width:90%;
+    background-color: rgb(203, 35, 102);
+    border-radius: 20px;
+    margin-left:20px;
+    
+}
+.emergencysos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.tap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    margin-top: 7px;
+}
+.ai{
+    height:15%;
+    width:40%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left:27px;
+    margin-top: 20px;
+    display:inline-block;
+    
+}
+.aisafety{
+    margin-left:80px;
+    margin-top: -65px;
+    font-size: 12px;
+}
+.safe{
+    height:15%;
+    width:40%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 51%;
+    margin-top: -105px;
+    margin-right:10px;
+}
+.arrow{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    font-size: 35px;
+}
+.safejourney{
+     margin-left:80px;
+    margin-top: -60px;
+    font-size: 12px;
+}
+.safety{
+    height:15%;
+    width:40%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 27px;
+    margin-top: 10px;
+}
+.safetyresources{
+     margin-left:76px;
+    margin-top: -60px;
+    font-size: 11.5px;
+}
+.emergency{
+    height:15%;
+    width:40%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 51%;
+    margin-top: -105px;
+    margin-right:10px;
+}
+    
+.emergencycontacts{
+     margin-left:76px;
+    margin-top: -60px;
+    font-size: 10px;
+}
+.symbols{
+    height:8%;
+    width:90%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 17px;
+    margin-top: 10px;
+}
+.type{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    align-items: center;
+    font-size: 30px;
+    
+}
